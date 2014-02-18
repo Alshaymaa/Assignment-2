@@ -10,7 +10,7 @@ namespace SpellChecker
 			file = new System.IO.StreamReader (filename);
 			input = file.ReadLine (); //reading  the # of words in the txt file
 			int N;
-			N = int.Parse (input);// conver it to integer number
+			N = int.Parse (input);// convert it to integer number
 			string[] dictionary = new string[N];
 			int i = 0;
 			input = file.ReadLine ();
