@@ -1,8 +1,8 @@
 Assignment-2
 ============
-This java program shows how to sort elements of ArrayList in descending order
-using comparator and reverseOrder method of Collections class.
+A simple C# program :
 
+A spell checker program  to check user's word if it is correctly spelled by using dictionary txt file.
 
 
 Contact Information :
