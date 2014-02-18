@@ -8,14 +8,14 @@ namespace SpellChecker
 			string input;
 			System.IO.StreamReader file;
 			file = new System.IO.StreamReader (filename);
-			input = file.ReadLine ();
+			input = file.ReadLine (); //reading  the # of words in the txt file
 			int N;
-			N = int.Parse (input);
+			N = int.Parse (input);// conver it to integer number
 			string[] dictionary = new string[N];
 			int i = 0;
 			input = file.ReadLine ();
 			while (input!=null) {
-				dictionary [i] = input;
+				dictionary [i] = input;//put all words in the array
 				i = i + 1;
 				input = file.ReadLine ();
 			}
@@ -25,7 +25,7 @@ namespace SpellChecker
 			file.Close ();
 			return dictionary;
 		}
-		static bool IsSpelledCorrectly(string word , string[] dictionary){
+		static bool IsSpelledCorrectly(string word , string[] dictionary){ // method to make sure the word is spelled correctly
 			int left, right, mid,count=0;
 			left = 0;
 			right = dictionary.Length - 1;
@@ -33,8 +33,8 @@ namespace SpellChecker
 				count = count + 1;
 				mid = (left + right) / 2;
 				if (word == dictionary [mid])
-					return true;
-				else if (word.CompareTo(dictionary [mid])<0)
+					return true;// if found the word
+				else if (word.CompareTo(dictionary [mid])<0) 
 					right = mid - 1;
 				else 
 					left = mid + 1;
@@ -50,9 +50,9 @@ namespace SpellChecker
 			dictionary = ReadDictionary ("dictionary.txt");
 			Console.Write
 				("Enter a word: ");
-			word = Console.ReadLine ();
-			while (word!="") {
-				if (IsSpelledCorrectly(word,dictionary))
+			word = Console.ReadLine ();//read the input word
+			while (word!="") {// make sure it is not null
+				if (IsSpelledCorrectly(word,dictionary)) 
 					Console.WriteLine ("Correct spelling!");
 				else 
 					Console.WriteLine ("Incorrect spelling...");
