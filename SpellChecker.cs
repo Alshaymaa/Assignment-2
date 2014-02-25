@@ -44,7 +44,7 @@ namespace SpellChecker
 
 		public static void Main (string[] args)
 		{
-      string[] dictionary;
+			string[] dictionary;
 			string word;
 			Console.WriteLine ("** Welcome to Spell Checker **");
 			Console.WriteLine ();
