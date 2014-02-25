@@ -3,7 +3,7 @@ using System;
 namespace SpellChecker
 {
 	class MainClass
-	{ 
+	{
 		public static string[] ReadDictionary(string filename){
 			string input;
 			System.IO.StreamReader file;
@@ -34,16 +34,17 @@ namespace SpellChecker
 				mid = (left + right) / 2;
 				if (word == dictionary [mid])
 					return true;// if found the word
-				else if (word.CompareTo(dictionary [mid])<0) 
+				else if (word.CompareTo(dictionary [mid]) < 0)
 					right = mid - 1;
-				else 
+				else
 					left = mid + 1;
 			}
 			return false;
 		}
 
 		public static void Main (string[] args)
-		{   string[] dictionary;
+		{
+      string[] dictionary;
 			string word;
 			Console.WriteLine ("** Welcome to Spell Checker **");
 			Console.WriteLine ();
@@ -61,13 +62,6 @@ namespace SpellChecker
 			}
 			Console.WriteLine ();
 			Console.WriteLine ("** Bye **");
-
-
-
-
-
-
-	
 		}
 	}
 }
